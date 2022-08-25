@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<body>
+<h1>Welcome to Login page !</h1>
+	<form action="/validate" method="post">
+		Enter User Name : <input type="text" name="user" required = "required" placeholder="Enter userID" ><br><br>
+		Enter Password : <input type="password" name="pass" required="required" placeholder="Enter password"><br><br>
+		<input type="submit" name="vall" value="Validate">
+		
+	</form>
+<br><br>
+<h2 th:text="${message}" style="color: red"></h2>
+<br><br>
+<input type="button" value="Go back!" onclick="history.back()">
+<br><br>
+<a href="./">Go To Main Page</a>
+</body>
+</html>

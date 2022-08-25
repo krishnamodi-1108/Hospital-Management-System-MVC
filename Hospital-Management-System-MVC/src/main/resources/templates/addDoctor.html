@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Adding Doctor </title>
+<link th:href="@{/styles/main.css}" rel="stylesheet">
+</head>
+<body>
+<h1>Fill Doctor Details</h1>
+<form action="/saveDoctor" method="post">
+	Enter Doctor Name : <input type="text" name="dName" required="required" placeholder="Docotr Name"><br><br>
+	Enter Doctor Age : <input type="number" name="dAge" required="required" placeholder="Docotr Age"><br><br>
+	Enter Doctor Gender : <select name="dGender" required="required" >
+	<option value="Male">Male</option>
+	<option value="Female">Female</option>
+	</select><br> <br>
+	Enter Doctor Experience : <input type="text" name="dExperience" required="required" placeholder="Experience in years"><br><br>
+	Enter Doctor Contact Number : <input type="tel" name="dContact" required="required" pattern="[0-9]{10}" placeholder="10 digit mobile number"><br><br>
+	Enter Doctor Address : <input type="text" name="dAddress" required="required" placeholder="Doctor Address"><br><br>
+	Select Doctor Department  : <select name="dDepartment" required="required">
+	<option value="Cardiologists">Cardiologists</option>
+	<option value="Dermatologists">Dermatologists</option>
+	<option value="Neurologists">Neurologists</option>
+	<option value="Gastroenterologists">Gastroenterologists</option>
+	</select>
+	<br><br>
+	<input type="submit" value="Register Doctor">
+</form>
+<br>
+<br>
+	<input type="button" value="Go back!" onclick="history.back()">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registering Patient</title>
+<link th:href="@{/styles/main.css}" rel="stylesheet">
+</head>
+<body>
+<h1>Hospital management System</h1>
+<hr>
+<br>
+<h3>Patient Registration Form</h3>
+<form action="/inputDetailsToRegisterPatient" method="post">
+	Enter Patient Name : <input type="text" name="pName" required="required" placeholder="Your Name"><br><br>
+	Enter Patient Age : <input type="number" name="pAge" required="required" placeholder="Your Age"><br><br>
+	Enter Patient Gender : <select name="pGender" required="required" >
+	<option value="Male">M</option>
+	<option value="Female">F</option>
+	</select><br> <br>
+	Enter Patient Contact Number : <input type="tel" name="pContact" required="required" pattern="[0-9]{10}" placeholder="10 digit mobile number"><br><br>
+	Enter Patient Address : <input type="text" name="pAddress" required="required" placeholder="Your Address"><br><br>
+	Enter Patient Symptoms :<input type="text" name="pSymptom" required="required" placeholder="Symptoms/Disease"><br><br>
+	<input type="submit" value="Sign up">
+	<input type="reset" value="Reset Form">
+	
+</form>
+<br><br>
+<h3 th:text="${message}" style="color: red"></h3>
+<br>
+<br>
+ <input type="button" value="Go back!" onclick="history.back()">
+</body>
+</html>

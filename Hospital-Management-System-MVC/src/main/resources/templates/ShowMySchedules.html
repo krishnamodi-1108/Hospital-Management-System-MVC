@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Showing Schedules</title>
+</head>
+<body>
+
+<h2>Schedule Details</h2>
+<table border="1">
+	<tr>
+		<th>Doctor ID</th>
+		<th>Name</th>
+		<th>Available Day</th>
+		<th>Slot Start</th>
+		<th>Slot End</th>
+		
+	</tr>
+	<tr>
+		<td th:text="${schedule.doctorId}"></td>
+		<td th:text="${schedule.nameOfDoctor}"></td>
+		<td th:text="${schedule.availableDay}"></td>
+		<td th:text="${schedule.slotStart}"></td>
+		<td th:text="${schedule.slotEnd}"></td>
+		
+	</tr>
+</table>
+<br> <br>
+<input type="button" value="Go back!" onclick="history.back()"><br><br>
+<a href="./">Go To Main Page</a>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>All Patient Data</title>
+</head>
+<body>
+
+<h2>Patient Detail</h2>
+<table border="1">
+	<tr>
+		<th>Patient ID</th>
+		<th>Name</th>
+		<th>Gender</th>
+		<th>Age</th>
+		<th>Contact No.</th>
+		<th>Symptoms</th>
+	</tr>
+	<tr>
+	<tr th:each="patientList : ${patientList}">
+		<td th:text="${patientList.patientId}"></td>
+		<td th:text="${patientList.patientName}"></td>
+		<td th:text="${patientList.patientGender}"></td>
+		<td th:text="${patientList.patientAge}"></td>
+		<td th:text="${patientList.patientContact}"></td>
+		<td th:text="${patientList.patientSymptoms}"></td>
+	</tr>
+</table>
+<br> <br>
+<form action="#"  method="post" th:object="${command}" th:action="@{./removePatientMessage}">
+	Select Employee ID : <select th:field="*{patientId}">
+	<option th:each="id : ${patientIds}" th:value="${id}" th:label="${id}"></option>
+	</select><br><br>
+	<input type="submit" value="Delete Patient">
+</form>
+<br><br>
+<a href="./">Go To Main Page</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>Doctor Schedule Details</h2>
+<table border="1">
+	<tr>
+		<th>Doctor ID</th>
+		<th>Name</th>
+		<th>Available Day</th>
+		<th>Slot Start</th>
+		<th>Slot End</th>
+		
+	</tr>
+	<tr>
+	<tr th:each="availableDoctorsSchedule : ${availableScheduleList}">
+	
+		<td th:text="${availableDoctorsSchedule.doctorId}"></td>
+		<td th:text="${availableDoctorsSchedule.nameOfDoctor}"></td>
+		<td th:text="${availableDoctorsSchedule.availableDay}"></td>
+		<td th:text="${availableDoctorsSchedule.slotStart}"></td>
+		<td th:text="${availableDoctorsSchedule.slotEnd}"></td>
+		
+	</tr>
+</table>
+<br> <br>
+
+<form action="/bookAppointment" method="post">
+	Enter Doctor Id : <input type="text" name="dId" required = "required" placeholder="Doctor ID"><br><br>
+	<input type="submit" name="dId" value="Book Appointment">
+</form>
+<br> <br>
+<input type="button" value="Go back!" onclick="history.back()">
+<br><br>
+<a href="./">Go To Main Page</a>
+
+</body>
+</html>

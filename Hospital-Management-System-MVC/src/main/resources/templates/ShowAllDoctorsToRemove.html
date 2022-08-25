@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>Doctor Details</h2>
+<table border="1">
+	<tr>
+		<th>Doctor ID</th>
+		<th>Name</th>
+		<th>Specialization</th>
+		<th>Experience</th>
+		<th>Gender</th>
+		<th>Age</th>
+		<th>Contact Number</th>
+		<th>Address</th>
+		
+	</tr>
+	<tr>
+	<tr th:each="doctorList : ${doctorList}">
+	
+		<td th:text="${doctorList.doctorId}"></td>
+		<td th:text="${doctorList.doctorName}"></td>
+		<td th:text="${doctorList.doctorDepartment}"></td>
+		<td th:text="${doctorList.doctorExperience}"></td>
+		<td th:text="${doctorList.doctorGender}"></td>
+		<td th:text="${doctorList.doctorAge}"></td>
+		<td th:text="${doctorList.doctorContact}"></td>
+		<td th:text="${doctorList.doctorAddress}"></td>
+		
+	</tr>
+</table>
+<br> <br>
+<form action="#"  method="post" th:object="${command2}" th:action="@{./removeDoctor}">
+	Select Employee ID : <select th:field="*{doctorId}">
+	<option th:each="id : ${doctorIds}" th:value="${id}" th:label="${id}"></option>
+	</select><br><br>
+	<input type="submit" value="Delete Doctor">
+</form>
+<br><br>
+<a href="./">Go To Main Page</a>
+</body>
+</html>

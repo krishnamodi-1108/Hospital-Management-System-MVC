@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>enter password to register</title>
+<link th:href="@{/styles/main.css}" rel="stylesheet">
+</head>
+<body>
+<h1>Thank you for Registering at HMS.</h1>
+<hr>
+<br>
+<h2 th:text="${message}"></h2>
+<h3>Please keep it for future login purposes.</h3>
+<br> <br>
+	<form action="/registerPatient" method="post">
+	<label>Enter Password : </label>
+		 <input type="text" name="password" required="required" placeholder="Password"><br><br>
+		<input type="submit" name="Submit" value="Submit">
+		<input type="reset" value="Reset Form">
+	</form>
+<br> <br>
+
+<a href="./">Go To Main Page</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Reschedule Appointment</title>
+</head>
+<body>
+<h2>Appointments </h2>
+<table border="1">
+	<tr>
+		<th>Appointment ID</th>
+		<th>Patient ID</th>
+		<th>Name</th>
+		<th>Slot</th>
+		<th>Date</th>
+		<th>Doctor ID</th>
+		<th>Doctor's Name</th>
+		<th>Department</th>
+	</tr>
+	<tr th:each="appointment : ${appointmentList}">
+		<td th:text="${appointment.appointmentId}"></td>
+		<td th:text="${appointment.patientId}"></td>
+		<td th:text="${appointment.patientName}"></td>
+		<td th:text="${appointment.slot}"></td>
+		<td th:text="${appointment.date}"></td>
+		<td th:text="${appointment.doctorId}"></td>
+		<td th:text="${appointment.doctorName}"></td>
+		<td th:text="${appointment.department}"></td>
+	</tr>
+</table>
+<br><br>
+	
+	<form action="/rescheduleAppointmentTo" method="post">
+	Enter Appointment Id : <input type="text" name="appointmentId"><br><br>
+  <label for="appointmentDate">Enter date for appointment :</label>
+  <input type="date" id="appointmentDate" name="appointmentDate">
+	
+	<input type="submit" name="appointmentIdAndDate" value="Proceed">
+</form><br><br>
+	 <input type="button" value="Go back!" onclick="history.back()">
+</body>
+</html>

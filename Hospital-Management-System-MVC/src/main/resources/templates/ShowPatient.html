@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title> Showing Patient Details </title>
+</head>
+<body>
+<h1>Hospital Management System</h1>
+<hr>
+<h3>Patient Profile</h3>
+<table border="1">
+	<tr>
+		<th>Patient ID</th>
+		<th>Name</th>
+		<th>Gender</th>
+		<th>Age</th>
+		<th>Contact No.</th>
+		<th>Symptoms</th>
+	</tr>
+	<tr>
+		<td th:text="${patient.patientId}"></td>
+		<td th:text="${patient.patientName}"></td>
+		<td th:text="${patient.patientGender}"></td>
+		<td th:text="${patient.patientAge}"></td>
+		<td th:text="${patient.patientContact}"></td>
+		<td th:text="${patient.patientSymptoms}"></td>
+	</tr>
+</table>
+<br> <br>
+ <input type="button" value="Go back!" onclick="history.back()"><br><br>
+<a href="./">Go To Main Page</a>
+</body>
+</html>
