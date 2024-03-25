@@ -115,58 +115,5 @@ public class DoctorServiceImpl implements DoctorService {
 		return scheduleDao.getAvailableDoctors(day);
 	}
 
-	
-
-//	@Autowired
-//	PatientDao patientDao;
-//	@Autowired
-//	ScheduleDao scheduleDao;
-//	@Autowired
-//	DoctorDao doctorDao;
-//	@Autowired
-//	AppointmentDao appointmentDao;
-//	
-//	
-//
-//	@Override
-//	public boolean updatePatientProfile(String doctorId, String patientId, Map<String, String> editList) {
-//		// TODO Auto-generated method stub
-//		return false;
-//	}
-//
-
-//
-//	@Override
-//	public boolean updateDoctorSchedule(String doctorId, Schedule schedule) {
-//		scheduleDao.deleteScheduleByDoctorId(doctorId);
-//		scheduleDao.saveSchedule(schedule);
-//		return true;
-//	}
-//
-//	@Override
-//	public List<Schedule> getAvailableDoctors(Date date) {
-//		return doctorDao.getAvailableDoctors(date);
-//	}
-//
-//	@Override
-//	public void displayAvailableDoctors(Date date) {
-//		List<Schedule> doctors = getAvailableDoctors(date);
-//		if (doctors == null){
-//			System.out.println("No Doctor Available");
-//		} 
-//		else {
-//			for(Schedule doc: doctors) {
-//				System.out.println(doc.toString());
-//			}
-//		}
-//	}
-//	
-
-//
-//	@Override
-//	public Patient getPatientProfile(String patientId) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
 }

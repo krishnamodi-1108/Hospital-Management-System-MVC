@@ -34,18 +34,6 @@ public interface DoctorService {
 
 
 	List<Schedule> getAvailableDoctors(Date date);
-	
-//	boolean updatePatientProfile(String doctorId, String patientId, Map<String,String> editList);
-//	
-//	
-//
-	
-//
-//	Patient getPatientProfile(String patientId);
-//
-//	void displayAvailableDoctors(Date date);
-//
-//	boolean updateDoctorSchedule(String doctorId, Schedule schedule);
-//
+
 
 }

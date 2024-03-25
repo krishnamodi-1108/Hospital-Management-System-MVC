@@ -75,19 +75,6 @@ public class PatientServiceImpl implements PatientService {
 			return "P101";
 	}
 
-//	AppointmentDaoImpl appointmentDaoImpl;
-//	PatientDaoImpl patientDaoImpl;
-//	
-//	@Autowired
-//	public void setAppointmentDaoImpl(AppointmentDaoImpl appointmentDaoImpl) {
-//		this.appointmentDaoImpl = appointmentDaoImpl;
-//	}
-//
-//	@Autowired
-//	public void setPatientDaoImpl(PatientDaoImpl patientDaoImpl) {
-//		this.patientDaoImpl = patientDaoImpl;
-//	}
-//
 	@Override
 	public boolean rescheduleAppointment(int aid, Date newDate) {
 		int rows = appointmentDao.reschedule(aid, newDate);
@@ -95,25 +82,12 @@ public class PatientServiceImpl implements PatientService {
 			return true;
 		return false;
 	}
-//
-//	@Override
-//	public void getPatientProfile(String id) {
-//		Patient patient = patientDaoImpl.getPatientById(id);
-//		System.out.println(patient.toString());
-//	}
-//
-//	@Override
-//	public int getLastPatientId() {
-//		return patientDaoImpl.getLastPId();
-//	}
-//	
+
 	@Override
 	public List<Appointment> getMyAppointments(String pid) {
 		return appointmentDao.getAllAppointmentsByPatientId(pid);
 	}
-//
-	
-//
+
 	@Override
 	public boolean cancelAppointmentRequest(int aid) {
 		Optional<Appointment> appointment = appointmentDao.findById(aid);

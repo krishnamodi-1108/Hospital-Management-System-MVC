@@ -10,7 +10,6 @@ import com.bean.Patient;
 import com.bean.PrevSlots;
 @Service
 public interface AppointmentService {
-//	List<PrevSlots> prevSlots(String dId);
 	Appointment requestAppointment(String id, String doc_id, Date date);
 	
 }

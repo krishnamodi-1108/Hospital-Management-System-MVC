@@ -67,9 +67,7 @@ public class AdminController {
 
 	@RequestMapping("/removeDoctorByID")
 	public ModelAndView removeDoctorByIdController() {
-//<<<<<<< HEAD
-//		return new ModelAndView("removeDoctor");
-//=======
+
 		ModelAndView modelAndView = new ModelAndView();
 		List<Doctor> doctorList = adminService.getAllDoctor();
 		String message = null;
@@ -86,7 +84,6 @@ public class AdminController {
 		modelAndView.setViewName("Output");
 		return modelAndView;
 		}
-//>>>>>>> branch 'master' of https://github.com/krishna-kusum/HMS-in-Spring-JPA-.git
 	}
 	@RequestMapping("/removeDoctor")
 public ModelAndView removeDoctorController(@ModelAttribute("command2") Doctor doctor) {

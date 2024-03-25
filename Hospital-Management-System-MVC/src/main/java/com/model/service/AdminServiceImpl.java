@@ -29,18 +29,6 @@ public class AdminServiceImpl implements AdminService {
 	@Autowired
 	private DoctorService doctorService;
 
-
-	
-//	@Override
-//	public boolean generateAppointment(String patientId) {
-//		return false;
-//	}
-
-//	@Override
-//	public boolean cancelAppointment(String patientId) {
-//		return false;
-//	}
-
 	@Override
 	public boolean registerDoctorToDatabase(Doctor doctor) {
 		return doctorService.addDoctor(doctor);
@@ -69,10 +57,4 @@ public class AdminServiceImpl implements AdminService {
 		return patientService.deletePatient(patientId);
 	}
 
-//	@Override
-//	public List<Schedule> getAvailableDoctors(Date date) {
-//		
-//	}
-
-	
 }

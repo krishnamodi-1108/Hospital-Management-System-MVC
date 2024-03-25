@@ -25,9 +25,7 @@ public interface PatientService {
 	List<Appointment> getMyAppointments(String pid);
 
 	boolean rescheduleAppointment(int aid, Date newDate);
-//
 
-//
 	boolean cancelAppointmentRequest(int aid);
-//
+
 }
